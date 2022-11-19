@@ -2,26 +2,32 @@ import { Button } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Home = () => {
+function Home() {
   const navigate = useNavigate();
   return (
     <>
-      <Button
-        variant="contained"
-        onClick={() => {
-          navigate("/counter");
-        }}>
-        Counter
-      </Button>
-      <Button
-        variant="contained"
-        onClick={() => {
-          navigate("/form");
-        }}>
-        form
-      </Button>
+      <h1 style={{ marginTop: "5%", marginLeft: "29%" }}>
+        This Application is made for Tubelight communication
+      </h1>
+      <div style={{ marginTop: "15%", marginLeft: "40%" }}>
+        <Button
+          style={{ marginRight: "2%" }}
+          variant="contained"
+          onClick={() => {
+            navigate("/counter");
+          }}>
+          Counter Application
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            navigate("/form");
+          }}>
+          Controlled Form
+        </Button>
+      </div>
     </>
   );
-};
+}
 
 export default Home;
